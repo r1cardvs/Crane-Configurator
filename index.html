@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <title>Kayapó - Configurador Grua</title>
+  </head>
+  <body>
+    < src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></>
+    <div class="container">
+      <header></header>
+      <main> 
+        <div class="row" > 
+          <div class="col-4"></div>
+          <div class="col-6 align-self-center">
+        <h3>Kayapó - Configurador Grua</h3> </div>
+        <div class="col-6"></div>
+      </div>
+
+        <div class="row  justify-content-center">
+            <div class="col-6">
+              <label for="customRange2" class="form-label">Tempo de Gara Fraca (Segundos):</label><span><input type="text" id="texttimeforceweak" value="0"
+                oninput="timeforceweak.value=value" onchange="swchange(this.value)"> </span>
+              <input type="range" class="form-range" min="1" max="255" id="timeforceweak" oninput="texttimeforceweak.value=value" onchange="swchange(this.value)">
+            
+              <label for="customRange2" class="form-label">Tempo de Gara Forte (Segundos):</label><span><input type="text" id="texttimeforcestrong" value="0"
+                oninput="timeforcestrong.value=value" onchange="swchangestrong(this.value)"> </span>
+              <input type="range" class="form-range" min="1" max="15" id="timeforcestrong" oninput="texttimeforcestrong.value=value" onchange="swchangestrong(this.value)">
+            
+              <div class="mb-5 row">
+                <label for="inputPassword" class="col-sm-5 col-form-label">Configuração do Moedeiro</label>
+                <div class="col-sm-7">
+                  <select class="form-select" aria-label="Default select example" onchange="swchangecoin(this.value)">
+                    
+                    <option value="1">1 Moeda / 1 jogada</option>
+                    <option value="2">2 Moeda / 1 jogada</option>
+                    <option selected value="3">1 Moeda / 2 jogada</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mb-5 row">
+                <label for="inputPassword" class="col-sm-5 col-form-label">Tempo por Jogada</label>
+                <div class="col-sm-7">
+                  <select class="form-select" aria-label="Default select example" onchange="swchangetimeturn(this.value)">
+                    
+                    <option value="1">10 Segundos</option>
+                    <option value="2">15 Segundos</option>
+                    <option value="3">20 Segundos</option>
+                    <option selected value="4">30 Segundos</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div class="form-group" onchange="radion()" >
+                
+                <div class="form-check form-check">
+                  <input class="form-check-input" type="radio" value="false" name="client" />
+                  <label class="form-check-label">Descer automaticamente após fim do tempo:</label>
+                </div>
+                
+                <div class="form-check form-check">
+                  <input class="form-check-input" type="radio" value="true" name="client" />
+                  <label class="form-check-label">Descer somente quando pressionado o botão:</label>
+                </div>
+              </div>
+            </div>
+
+            <!--SW1-->
+            <div class="col-4">
+              <div class="card">
+                <div class="card-header">
+                  Switch 1
+                </div>
+                <div class="card-body">
+                <div class="row">
+                  <div class="col-1">
+                    <div class="form-check form-switch ">
+                      <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw0" checked>
+                    </div>
+                  </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw1" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw2" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw3" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw4" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw5" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw6"  checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforceweak','timeforceweak')" id="sw7" checked>
+                      </div>
+                    </div>
+                </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </div>
+
+              <div class="card-header">
+                Switch 2
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-1">
+                    <div class="form-check form-switch ">
+                      <input class="form-check-input rotated" type="checkbox" id="sw21" checked>
+                    </div>
+                  </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw22" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw23" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw24" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforcestrong','timeforcestrong')" id="sw25" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforcestrong','timeforcestrong')" id="sw26" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforcestrong','timeforcestrong')" id="sw27"  checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" onchange="atualization(this,'texttimeforcestrong','timeforcestrong')" id="sw28" checked>
+                      </div>
+                    </div>
+                </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </div>
+
+              <div class="card-header">
+                Switch 3
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-1">
+                    <div class="form-check form-switch ">
+                      <input class="form-check-input rotated" type="checkbox" id="sw31" checked>
+                    </div>
+                  </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw32" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw33" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw34" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw35" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw36" checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw37"  checked>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="form-check form-switch ">
+                        <input class="form-check-input rotated" type="checkbox" id="sw38" checked>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+         </div>
+     </div>
+    </main>
+    <footer></footer>
+
+    <style>
+      .rotated {
+       transform: rotate(-90deg); /* Equal to rotateZ(45deg) */}
+    </style>
+    <>
+      function swchangetimeturn(swchange)
+      {
+        const swa="sw23",swb="sw24";
+        if(swchange==1)
+        {
+          chengesw(swa,false); chengesw(swb,false);
+        }  
+        if(swchange==2)
+        {
+          chengesw(swa,true); chengesw(swb,false);
+        }  
+        if(swchange==3)
+        {
+          chengesw(swa,false); chengesw(swb,true);
+        }  
+        if(swchange==4)
+        {
+          chengesw(swa,true); chengesw(swb,true);
+        }  
+
+      }
+      function swchangecoin(swchange)
+      {
+        if(swchange==1)
+        {
+          chengesw("sw21",true); chengesw("sw22",true);
+        }  
+        if(swchange==2)
+        {
+          chengesw("sw21",false); chengesw("sw22",true);
+        }  
+        if(swchange==3)
+        {
+          chengesw("sw21",true); chengesw("sw22",false);
+        }  
+      }
+      function chengesw(sw,cond1)
+      {
+          let status = document.getElementById(sw);
+          status.checked=cond1;
+      }
+      function swchange(swvalue)
+      {
+        let bin = (swvalue >>> 0).toString(2);
+        bin = bin.split("").reverse().join("");
+        
+
+        for(var i=0; i<8; i++)
+        {
+            if(bin[i]===undefined ||bin[i]==0)
+            {
+              let status = document.getElementById("sw"+i);
+              status.checked=false;
+             
+            }
+            else
+            {
+              let status = document.getElementById("sw"+i);
+              status.checked=true;
+            }
+        }
+      
+      }
+
+      function swchangestrong(swvalue)
+      {
+        let bin = (swvalue >>> 0).toString(2);
+        bin = bin.split("").reverse().join("");
+        let j=0;
+        for(var i=25; i<29; i++)
+        {
+            if(bin[j]===undefined ||bin[j]==0)
+            {
+              let status = document.getElementById("sw"+i);
+              status.checked=false;
+              
+             
+            }
+            else
+            {
+              let status = document.getElementById("sw"+i);
+              status.checked=true;
+            }
+            j++;
+        }
+      
+      }
+      
+      function radion()
+      {      
+        let op = document.querySelector('input[name="client"]:checked').value;
+        if(op=="true")
+        {
+          chengesw("sw31",false);
+          chengesw("sw32",true);
+        }else{
+          chengesw("sw31",false);
+          chengesw("sw32",false);
+        }
+
+      }
+      function atualization(statussw,textbox,range)
+      {
+        let op;
+        if(statussw.checked==false){op = -1} else{op = 1;}
+        let formvalue = document.getElementById(textbox); 
+        formvalue.value=formvalue.value+op;
+        let textvalue = document.getElementById(range);
+        raz=textvalue.value;
+       // ponter=statussw.id;
+        ponter = statussw.id.substr(2);
+        if(ponter>24)ponter=ponter-25;
+        ponter = Math.pow(2, ponter) * op;
+        raz=Number(raz) + ponter;
+        textvalue.value=raz;
+        formvalue.value=raz;
+      }
+    </>  
+</body>
+</html>
